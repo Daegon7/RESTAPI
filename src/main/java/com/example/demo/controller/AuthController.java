@@ -23,7 +23,7 @@ public class AuthController {
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
         if ("daegon".equals(request.getUsername()) && "Geometic7!".equals(request.getPassword())) {
 
-            System.out.println("############ chk 1");
+            System.out.println("############ chk 11");
 
             String token = JwtUtil.generateToken(request.getUsername());
             return ResponseEntity.ok(Collections.singletonMap("token", token));
